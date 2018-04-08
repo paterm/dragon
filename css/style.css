@@ -1,0 +1,114 @@
+.page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../images/dragon-background1.jpg") no-repeat center center;
+}
+
+.dragon-is-coming {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 970px;
+    max-width: 100%;
+    height: 350px;
+
+    margin: auto;
+    padding: 0 10px;
+
+    user-select: none;
+    z-index: 1;
+}
+
+.dragon-is-coming img {
+    max-width: 100%;
+}
+
+.back-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/dragon-back-overlay.png") no-repeat;
+    background-size: cover;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    padding: 0 55px !important;
+}
+
+.ui.menu {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+}
+
+.ui.menu a {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header__logo {
+    padding-top: 14px;
+}
+
+.header__logo-image {
+    width: 157px !important;
+    height: 21px;
+}
+
+#dragon {
+    position: absolute;
+    top: 20%;
+    left: -400px;
+    width: 320px;
+    height: 180px;
+    user-select: none;
+}
+
+#dragon.reversed {
+    top: 40%;
+    zoom: 1.3;
+}
+
+#dragon.reversed img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .ui.menu {
+    padding-left: 0;
+    justify-content: center;
+}
+
+@media (max-width: 710px) {
+    .header {
+        padding: 0 10px !important;
+    }
+
+    .header .ui.menu.right {
+        display: block !important;
+        margin-top: 12px;
+    }
+
+    .header .ui.menu.right .item {
+        padding: 5px 15px !important;
+    }
+}
