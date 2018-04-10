@@ -116,6 +116,12 @@
 #cvs {
     position: absolute;
     z-index: 1;
+    opacity: .8;
+    filter: blur(2px);
+}
+
+.header, .footer {
+    z-index: 2;
 }
 
 @media (max-width: 710px) {
