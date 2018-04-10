@@ -113,6 +113,11 @@
     zoom: 1.05;
 }
 
+#cvs {
+    position: absolute;
+    z-index: 1;
+}
+
 @media (max-width: 710px) {
     .header {
         padding: 0 10px !important;
