@@ -66,19 +66,32 @@ html, body {
 
 
         .egg__stone {
-            filter: blur(3px);
-            -webkit-filter: blur(3px);
-            -ms-filter: blur(3px);
         }
 
         .egg__stone--left {
-            background: url("../images/egg-left-stone.gif");
+            background: url("../images/egg-little_stone.png");
+
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+            animation-name: little-stone-animation;
 
             z-index: 3;
         }
 
         .egg__stone--right {
-            background: url("../images/egg-right-stone.gif");
+            background: url("../images/egg-big_stone.png");
+
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+            animation-name: big-stone-animation;
 
             z-index: 5;
         }
@@ -104,5 +117,25 @@ html, body {
 
     to {
         top: 20px;
+    }
+}
+
+@keyframes big-stone-animation {
+    from {
+        top: -250px;
+    }
+
+    to {
+        top: 20px;
+    }
+}
+
+@keyframes little-stone-animation {
+    from {
+        top: 250px;
+    }
+
+    to {
+        top: -20px;
     }
 }
