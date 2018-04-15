@@ -1,0 +1,108 @@
+html, body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.egg {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #24203C;
+}
+
+.egg__container,
+.egg__background,
+.egg__orbit-circles,
+.egg__orbit-stones,
+.egg__stone,
+.egg__egg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+    .egg__container {
+        width: 590px;
+        max-width: 100%;
+        height: 590px;
+        max-height: 100%;
+
+        margin: auto;
+    }
+
+    .egg__background {
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        -ms-filter: blur(8px);
+
+        z-index: 0;
+    }
+
+        .egg__orbit-circles {
+            background: url("../images/egg-orbita.png");
+
+            opacity: .3;
+            z-index: 1;
+        }
+
+        .egg__orbit-stones {
+            background: url("../images/egg-orbita-stones.gif");
+
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+            -ms-filter: blur(2px);
+
+            z-index: 1;
+        }
+
+
+        .egg__stone {
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+            -ms-filter: blur(3px);
+        }
+
+        .egg__stone--left {
+            background: url("../images/egg-left-stone.gif");
+
+            z-index: 3;
+        }
+
+        .egg__stone--right {
+            background: url("../images/egg-right-stone.gif");
+
+            z-index: 5;
+        }
+
+        .egg__egg {
+            background: url("../images/egg.png") no-repeat center center;
+
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+            animation-name: egg-animation;
+
+            z-index: 4;
+        }
+
+@keyframes egg-animation {
+    from {
+        top: -20px;
+    }
+
+    to {
+        top: 20px;
+    }
+}
